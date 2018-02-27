@@ -1,0 +1,73 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  color: white;
+}
+
+body > * {
+  margin: auto;
+}
+
+svg {
+  width: 256px;
+  height: 256px;
+}
+
+svg > g {
+  transform: translate(128px, 128px);
+}
+
+circle {
+  stroke: white;
+  stroke-width: 2px;
+}
+
+#numbers {
+  transform: translate(0, 6px);
+}
+
+#numbers > text {
+  fill: rgb(255, 251, 0);
+  text-anchor: middle;
+}
+
+#ticks > line {
+  stroke: white;
+}
+
+#hands {
+  stroke: white;
+  stroke-width: 4px;
+  transform: rotate(-90deg);
+}
+
+line {
+  animation: handrotation infinite linear;
+}
+
+#hour > line {
+  animation-duration: 86400s;
+}
+
+#minute > line {
+  animation-duration: 3600s;
+}
+
+#second > line {
+  animation-duration: 60s;
+  stroke: red;
+  stroke-width: 2px;
+}
+
+@keyframes handrotation {
+  to {
+    transform: rotate(1turn);
+  }
+}
